@@ -23,7 +23,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => res.send(database.users));
+app.get('/', (req, res) => res.send("It's working!"));
 app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, db)});
 app.put('/image', (req, res) => { image.handleImage(req, res, db)});
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)});
