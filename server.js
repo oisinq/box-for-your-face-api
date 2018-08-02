@@ -30,4 +30,4 @@ app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)});
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)});
 app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcrypt)});
 
-app.listen(3001, () => console.log("App is running on port 3001"));
+app.listen(process.env.PORT || 3000, () => console.log(`App is running on port ${process.env.PORT}`));
